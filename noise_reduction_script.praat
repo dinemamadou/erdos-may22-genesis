@@ -1,8 +1,7 @@
-	# This praat script removed any noise that is beyond 9000Hz
-	# /Users/tadjou-ndinemamadouyacoubou/Desktop/Erdos-Institute_Bootcamp2022/erdos-may22-genesis/Data/Train/
+	# This praat script removes any noise that is equivalent to the noise within the first 50ms of each audio
 
-	dir$ = "/Users/tadjou-ndinemamadouyacoubou/Desktop/Erdos-Institute_Bootcamp2022/erdos-may22-genesis/Data/Test/"
-	denoised$ = "/Users/tadjou-ndinemamadouyacoubou/Desktop/Erdos-Institute_Bootcamp2022/erdos-may22-genesis/Data/Test_denoised/"
+	dir$ = "/Users/.../Desktop/Erdos-Institute_Bootcamp2022/erdos-may22-genesis/Data/Test/"
+	denoised$ = "/Users/.../Desktop/Erdos-Institute_Bootcamp2022/erdos-may22-genesis/Data/Test_denoised/"
 
 	Create Strings as file list: "files" , dir$ + "*.wav"
 	nFiles = Get number of strings
