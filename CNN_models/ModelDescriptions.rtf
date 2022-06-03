@@ -18,14 +18,22 @@ Model 4: Same as Model 1, but the conv2d layers have size 5x2. \
 Result: Done. Model saved, epochs saved. Overfits at around >=15 epochs, val accuracy is mid 50s. \
 \
 Model 5:  Same as Model 1, but the conv2d layers have size 2x5. \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 Result: Done. Model saved, epochs saved. Overfits at around >=15 epochs, val accuracy is mid 50s. \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
+Result: Done. Model saved, epochs saved. Overfits at around >=15 epochs, val accuracy is mid 50s. \
+\
 Model 6: Same as Model 1, but with height shifts preprocessing and width shifts. width shift: range 0.2. heigh shift: range 0.1, fill = \'91wrap\'92. Runs for 30 epochs. May not fit very well in that time. \
 \
+Result: Done. Model saved, epochs saved. \
+\
 Model 7: Same as Model 1, but the conv2d layers have more slices (same as in the cats vs dogs example in the textbook). \
+Result: Did not save. Will ignore this model since it takes too long to run. \
 \
 \pard\pardeftab720\sa120\partightenfactor0
 \cf2 \cb3 \expnd0\expndtw0\kerning0
-Model 8: Same structure as Model 1. Preprocessing: height_shift_range = 0.05, width_shift_range = 0.2. Runs for 100 epochs, since it takes a while to fit. }
+Model 8: Same structure as Model 1. Preprocessing: height_shift_range = 0.05, width_shift_range = 0.2. Runs for 100 epochs, since it takes a while to fit. \
+Model 9: Same structure as Model 3 (fewer stacks in the layers). Preprocessing: width_shift_range = height_shift_range = 0.1. \
+Model 10: Same structure as Model 3 (fewer stacks in the layers). Preprocessing: width_shift_range = height_shift_range = 0.01\
+Result: Did not finish\'97began to overfit before 30 epochs were up. \
+\
+\
+\
+}
