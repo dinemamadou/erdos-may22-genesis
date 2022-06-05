@@ -37,8 +37,10 @@ As another example, conveying emotions in the language translation and speech-to
 
 # Workflow
 
-	— add using python –
 The entire project can be divided into several steps. We first preprocessed our data to clean it up. Then, we extracted two types of features. Next, using the audio and the image representations, we implemented two separate models. Finally, we compared the performance of our models  to each other and to human rater performance.
+
+![Screen Shot 2022-06-04 at 10 59 44 PM](https://user-images.githubusercontent.com/35503370/172033116-a96f66c7-2e38-4c1c-9911-21472e3a78a4.png)
+
 
 # Dataset
 
@@ -75,6 +77,7 @@ Slide 6: Feature Extraction (Mid Features (PyAudioAnalysis):
 
 Mid features are interpretable statistics in an audio signal, such as what frequencies are present and at what intensity. They are obtained by splitting the audio into frames, computing a set of interpretable statistics on each, and tabulating the average and standard deviation over all frames. The advantage of mid features is their interpretability and their relatively low computational cost, as each clip produces a vector with 136 entries. The main disadvantage is that by taking averages, we lose the temporal dimension. We used pyAudioAnalysis to compute these features. 
 
+![Screen Shot 2022-06-04 at 11 02 13 PM](https://user-images.githubusercontent.com/35503370/172033161-617784fa-78d1-45fd-b9b3-56027a90829a.png)
 
 ### Feature Extraction (Spectrogram (Librosa ):
 
@@ -86,6 +89,7 @@ A spectrogram of an audio file is a “heat map” image depicting which sound f
 We used the mid features to train a support vector machine. We also tried to detect which mid features are most relevant in emotion classification. To that end, we trained another SVM using principal components without much success. Without PCA, the model accurately predicted the emotions of 45% of audio files in the test set. This is 4% better than the accuracy of the human raters in the original CREMA-D experiment, as their average accuracy for all emotions was 41%.
 
 We also experimented using different subsets of emotion categories to mimic what happens if a human rater had fewer options to choose.  We observed that as the number of emotion categories decreased, the classifying accuracy improved, even as high as 90% when classifying two specific emotions.
+
 ![class](https://user-images.githubusercontent.com/35503370/172033039-cab3207f-50ba-4ea2-a161-727ab54a371c.png)
 
 
