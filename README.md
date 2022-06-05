@@ -115,6 +115,16 @@ We are also grateful to our **Mentor Akul Dewan**, and the **Erdős Institute Te
 
 
 
- 
+# Team Members' Personal Links
+https://www.linkedin.com/in/elfnrpyrz/
+
+https://www.linkedin.com/in/mario-gomez-flores
+
+http://nooranidoost.com/
+
+www.linkedin.com/in/tajudeen-mamadou 
+
+https://math.wfu.edu/people-faculty
+
 
 
