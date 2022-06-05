@@ -19,13 +19,11 @@ In summary, our classifiers performed at least as well as human raters did, and 
 
 
 
-
 ## Problem Statement & Stakeholders
 
 In this project, we considered the problem of classifying the emotional content of audio from human speech.
 
 For instance, how can we train a computer to distinguish the emotions in the following clips? . A key point here is that the meaning of the sentence is emotionally neutral. The only way to interpret emotion is by the way the words are spoken. 
-
 
 
 
@@ -88,16 +86,28 @@ A spectrogram of an audio file is a “heat map” image depicting which sound f
 We used the mid features to train a support vector machine. We also tried to detect which mid features are most relevant in emotion classification. To that end, we trained another SVM using principal components without much success. Without PCA, the model accurately predicted the emotions of 45% of audio files in the test set. This is 4% better than the accuracy of the human raters in the original CREMA-D experiment, as their average accuracy for all emotions was 41%.
 
 We also experimented using different subsets of emotion categories to mimic what happens if a human rater had fewer options to choose.  We observed that as the number of emotion categories decreased, the classifying accuracy improved, even as high as 90% when classifying two specific emotions.
+![class](https://user-images.githubusercontent.com/35503370/172033039-cab3207f-50ba-4ea2-a161-727ab54a371c.png)
+
 
 ### Model 2: Classifying emotions using Spectrograms and CNNs:
 
 We trained a convolutional neural network on the spectrogram features. Because we only had about 4900 spectrograms in the training set, we were concerned about overfitting. To alleviate this, we experimented with several data augmentation techniques, such as adding a dropout layer, or adding a preprocessing step where we randomly shift the training data vertically and horizontally before feeding it to the neural net.
 
+![architecture](https://user-images.githubusercontent.com/35503370/172032962-89766465-0a64-4aa8-8ad6-33ca4a851b69.png)
+
+
 During training, our final model achieved around 50% validation accuracy. However, the model reached only 42% test accuracy. This is slightly worse than our SVM model, but still 1% better than the accuracy of the human raters in the CREMA-D experiment.
+
+![accuracy](https://user-images.githubusercontent.com/35503370/172033004-09546299-d59e-4a6b-a99f-40e48c5a6470.png)
+
+
 
 # Comparing models to human performance:
 
 Here, we compare the recall of the human raters, the SVM, and the CNN in each of the six emotions. For example, the bars above “neutral” show what percentage of the neutral audio files were classified correctly. It seems that the SVM performed similarly to the human raters, but the CNN exhibited different behavior. The SVM performed highest for Anger and Neutral, similar to the human raters, but the CNN performed highest for the Anger and Sad emotion categories.
+
+![model summary](https://user-images.githubusercontent.com/35503370/172032791-133ff77c-cb05-42aa-bee4-49f75d1f657b.png)
+
 
 # Conclusions/Further directions
 
